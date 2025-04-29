@@ -1,0 +1,36 @@
+:root{
+
+    --backgorund-color: #000000;
+    --card-color: #101010;
+    --text-color: #FFFFFF;
+    --dark-text-color: #717171;
+    --stroke-color: #0153F4;
+    --green-color: #04CE00;
+    --red-color: #C12525;
+    --line-color: #232323;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--backgorund-color);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}

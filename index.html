@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/tolltip.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Crypto App</title>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <nav class="coin-navbar">
+            <h1 class="app-name">CryptoInfoApp</h1>
+            <div class="navbar-items">
+                <div class="navbar-menus">
+
+                    <a href="" class="home">
+                        <img class="home-icon" src="assets/icons/home-dark.png"
+                            data-default-src="assets/icons/home-dark.png" data-selected-src="assets/icons/home.png">
+                        <p>Home</p>
+                    </a>
+
+                </div>
+                <div class="navbar-info">
+                    <div class="exchange">
+                        <span class="usd-to-try">
+                            <p class="usd-to-try-text"></p>
+                        </span>
+                        <span class="usd-to-eur">
+                            <p class="usd-to-eur-text"></p>
+
+                        </span>
+                        <span class="usd-to-gbp">
+                            <p class="usd-to-gbp-text"></p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="crypto-info">
+
+            <div class="crypto-list">
+
+                <input type="text" class="crypto-list-search" placeholder="Search for coin">
+                <div class="all-cryptos">
+                    
+                </div>
+            </div>
+
+            <div class="crypto-details">
+
+                <nav class="crypto-details-navbar">
+                    <div class="crypto-name-currency-container">
+
+                        <div class="choise-crypto-name">
+                            <img class="info-logo" width="30" height="30" style="border-radius: 10px;" src="" alt="">
+                            <p class="details-crypto-name">Lütfen sol kısımda bulunan coin listesinden seçim yapınız.</p>
+                            <p class="details-crypto-symbol"></p>
+                        </div>
+
+                        <div class="current-price-exchange">
+                            <h1 class="crypto-current-price"></h1>
+                        </div>
+                    </div>
+
+                    <div class="crypto-more-details">
+                        <span class="end-24h">
+                            <span class="text-span">End 24H: <p class="end-24h-price">00.00</p></span>
+                            <span class="text-span">End 24H: <p class="end-24h-percentage">00.00</p></span>
+                        </span>
+                        <span class="crypto-details-navbar-line"></span>
+                        <span class="end-24h">
+                            <span class="text-span">Hihg 24H:<p style="color: white;" class="high-price">00.00</p></span>
+                            <span class="text-span">Low 24H<p style="color: white;" class="low-price">00.00</p></span>
+                        </span>
+                        <span class="crypto-details-navbar-line"></span>
+                        <span class="end-24h">
+                            <span class="text-span">Max Price:<p style="color: white;" class="all-time-high">00.00</p></span>
+                            <span class="text-span">Min Price:<p style="color: white;" class="all-time-low">00.00</p></span>
+                        </span>
+                    </div>
+                </nav>
+
+                <div id="crypto-chart" class="crypto-chart">
+
+                </div>
+
+                <div class="crypto-details-cards">
+
+                    <div class="info-cards">
+
+                        <div class="info-cards-title">
+                            <p>ATH Change Percentage</p>
+                            <div class="tooltip-container">
+                                <img class="tooltip" src="assets/icons/info.png" alt="">
+                                <div class="tooltip-text">Tüm zamanların en yüksek fiyatına göre değişim yüzdesi</div>
+                            </div>
+                        </div>
+
+                        <h1 class="choise info-cards-ath-percentage">00.00%</h1>
+                        <p class=" choise-date ath-percentage-date">Last Update : ...</p>
+                    </div>
+
+                    <div class="info-cards">
+
+                        <div class="info-cards-title">
+                            <p>ATL Change Percentage</p>
+                            <div class="tooltip-container">
+                                <img class="tooltip" src="assets/icons/info.png" alt="">
+                                <div class="tooltip-text">Tüm zamanların en düşük fiyatına göre değişim yüzdesi.</div>
+                            </div>
+                        </div>
+
+                        <h1 class="choise info-cards-atl-percentage">00.00%</h1>
+                        <p class=" choise-date atl-percentage-date">Last Update : ...</p>
+                    </div>
+
+                    <div class="info-cards">
+
+                        <div class="info-cards-title">
+                            <p>Total Supply</p>
+                            <div class="tooltip-container">
+                                <img class="tooltip" src="assets/icons/info.png" alt="">
+                                <div class="tooltip-text">Piyasaya sürülebilecek toplam coin miktarı.</div>
+                            </div>
+                        </div>
+
+                        <h1 class="choise info-cards-supply">00.00</h1>
+                        <p class=" choise-date info-cards-max-supply">...</p>
+                    </div>
+
+                    <div class="info-cards">
+
+                        <div class="info-cards-title">
+                            <p>Total Volume</p>
+                            <div class="tooltip-container">
+                                <img class="tooltip" src="assets/icons/info.png" alt="">
+                                <div class="tooltip-text">Son 24 saatteki toplam alım-satım hacmi.</div>
+                            </div>
+                        </div>
+
+                        <h1  class="choise info-cards-volume">00.00</h1>
+
+                    </div>
+
+                    <div class="info-cards">
+
+                        <div class="info-cards-title">
+                            <p>Marketcap Rank</p>
+                            <div class="tooltip-container">
+                                <img class="tooltip" src="assets/icons/info.png" alt="">
+                                <div class="tooltip-text">Piyasa değerine göre sıralama numarası.</div>
+                            </div>
+                        </div>
+
+                        <h1 class="choise info-cards-marketcap-rank">00.00</h1>
+
+                    </div>
+
+                    <div class="info-cards">
+
+                        <div class="info-cards-title">
+                            <p>Marketcap</p>
+                            <div class="tooltip-container">
+                                <img class="tooltip" src="assets/icons/info.png" alt="">
+                                <div class="tooltip-text">Toplam piyasa değeri (fiyat × dolaşımdaki miktar).</div>
+                            </div>
+                        </div>
+
+                        <h1 class="choise info-cards-marketcap">00.00</h1>
+
+                    </div>
+
+                    <div class="info-cards">
+
+                        <div class="info-cards-title">
+                            <p>Marketcap(24h)</p>
+                            <div class="tooltip-container">
+                                <img class="tooltip" src="assets/icons/info.png" alt="">
+                                <div class="tooltip-text">Son 24 saatteki piyasa değeri değişimi</div>
+                            </div>
+                        </div>
+
+                        <h1 class="choise info-cards-marketcap-change">00.00</h1>
+
+                    </div>
+
+                    <div class="info-cards">
+
+                        <div class="info-cards-title">
+                            <p>Marketcap Percentage(24h)</p>
+                            <div class="tooltip-container">
+                                <img class="tooltip" src="assets/icons/info.png" alt="">
+                                <div class="tooltip-text">Piyasa değerindeki 24 saatlik yüzdelik değişim.</div>
+                            </div>
+                        </div>
+
+                        <h1 class="choise info-cards-marketcap-change-percentage">00.00%</h1>
+
+                    </div>
+
+
+                </div>
+
+                <p class="warring">All cryptocurrency data presented on this platform is sourced in real-time from
+                    trusted third-party providers,
+                    including CoinGecko and Binance. However, the accuracy and timeliness of this data are subject to
+                    the reliability of the original sources.
+                    Due to potential delays in data transmission, technical issues, or market volatility,
+                    the information displayed may occasionally be inaccurate or outdated. Therefore,
+                    we strongly advise against making any investment decisions based solely on the data provided here.
+                    This platform is intended for informational purposes only and does not constitute financial advice
+                    of any kind.
+                    Thank you for your understanding.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</body>
+
+</html>
