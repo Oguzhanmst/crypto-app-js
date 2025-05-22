@@ -462,4 +462,3 @@ async function coinGeckoAndbinanceDatas() {
 }
 
 coinGeckoAndbinanceDatas()
-
