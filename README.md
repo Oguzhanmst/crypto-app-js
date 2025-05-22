@@ -1,5 +1,7 @@
 # CryptoInfoApp
 
+![Ekran Görüntüsü](assets/images/cryptoinfoapp-screen-photo.png)
+
 CryptoInfoApp, gerçek zamanlı olarak CoinGecko ve Binance API'lerini kullanarak kripto para birimlerinin fiyatlarını ve detaylı bilgilerini gösteren bir web uygulamasıdır.
 
 ## Özellikler
